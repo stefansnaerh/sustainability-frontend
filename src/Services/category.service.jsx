@@ -13,7 +13,7 @@ import http from "../http-common";
   const create = (data) =>  {
     return http.post("/categories", data);
   }
-
+// hello
   const update = (id, data) => {
     return http.put(`/categories/${id}`, data);
   }
