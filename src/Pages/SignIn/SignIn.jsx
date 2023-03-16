@@ -45,9 +45,7 @@ let navigate = useNavigate()
 
 
     userService.logIn(params).then((response) => {
-      console.log(response);
-      console.log(response.data);
-      console.log(response.data.access_token);
+    
       sessionStorage.setItem('token',response.data.access_token)
       sessionStorage.setItem('userId', response.data.user.id)
       if (response.data.access_token) {
