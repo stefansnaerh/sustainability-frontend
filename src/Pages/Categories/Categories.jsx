@@ -10,7 +10,7 @@ const Categories = () => {
     const [categories, setCategories] = useState([])
     const navigator = useNavigate();
 
-    const urlImage = 'http://localhost:8080/public/images/'
+    const urlImage = 'https://sustainability-backend2.onrender.com/public/images/'
 
     const getCategories = () => {
         CategoryService.getAll().then(response => {
