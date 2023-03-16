@@ -37,27 +37,35 @@ const ItemPopup = (props) => {
           <p className='bee-good'>Be Good at..</p>
           <h1>{categoryItem.name}</h1>
           <img className='item-photo' alt='attraction' src={urlImage + categoryItem.image} />
-         <a href="https://www.globalgoals.org/goals/"> 
-         <img
+
+          <img
             alt='BY DOING THIS TASK YOU ARE HELPING THE WORLD BY SUPPORTING THESE UN WOLRD GOALS >'
             className='task-tree'
             src={taskTree}
           />
-          </a>
+
           <div className='points-leaf-container'>
             <p>{categoryItem.points}p</p>
           </div>
           <div className='location-info-button-container'>
-            <p>Location</p>
-            <p>{categoryItem.tags}</p>
+            <p>{categoryItem.type}</p>
+            {categoryItem.tags ? categoryItem.tags.split('.').map((tag, index) => (
+              <p key={index}>{tag.trim()}</p>
+            )) : <p>{categoryItem.tags}</p>}
           </div>
-          {sessionStorage.getItem('userId') ? <button onClick={() => setShowPostPopup(true)}>Post your efforts</button> : null}
+          <div className='container-buttons'>
+            {sessionStorage.getItem('userId') ? <button onClick={() => setShowPostPopup(true)}>Post your efforts</button> : null}
+            <a href="https://www.globalgoals.org/goals/">
+              <button>See the Global Goals</button>
+            </a>
+          </div>
+
         </section>
         : null}
-        {showPostPopup ? (
-          <PostPopup
-          setShowPostPopup={setShowPostPopup}/>
-        ): null}
+      {showPostPopup ? (
+        <PostPopup
+          setShowPostPopup={setShowPostPopup} />
+      ) : null}
     </>
   )
 }
