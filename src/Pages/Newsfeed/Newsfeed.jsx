@@ -10,7 +10,7 @@ import PostPopup from '../../Components/PostPopup/PostPopup';
 
 function Newsfeed() {
 
-  const urlImage = 'http://localhost:8080/public/images/'
+  const urlImage = 'https://sustainability-backend2.onrender.com/public/images/'
 
   const [showPostPopup, setShowPostPopup] = useState(false)
 

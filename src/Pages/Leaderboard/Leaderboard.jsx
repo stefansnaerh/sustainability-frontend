@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 
 function Leaderboard() {
 
-  const urlImage = 'http://localhost:8080/public/images/'
+  const urlImage = 'https://sustainability-backend2.onrender.com/public/images/'
   const [topTen, setTopTen] = useState([]);
 
   useEffect(() => {

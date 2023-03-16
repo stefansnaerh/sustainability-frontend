@@ -24,7 +24,7 @@ const create = (data) => {
 
   var config = {
     method: 'post',
-    url: 'http://' + window.location.hostname + ':8080/posts',
+    url: 'https://sustainability-backend2.onrender.com/posts',
     headers: {
       'Content-Type': 'multipart/form-data',
       'Authorization': sessionStorage.getItem('token')

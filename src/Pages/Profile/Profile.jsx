@@ -13,7 +13,7 @@ const Profile = () => {
     let userId = sessionStorage.getItem('userId');
     const [user, setUser] = useState([]);
     const [posts, setPosts] = useState([]);
-    const urlImage = 'http://localhost:8080/public/images/'
+    const urlImage = 'https://sustainability-backend2.onrender.com/public/images/'
 
     const getProfile = () => {
         UserService.get(userId).then((response) => {

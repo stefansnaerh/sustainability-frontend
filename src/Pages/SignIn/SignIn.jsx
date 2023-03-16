@@ -32,16 +32,20 @@ let navigate = useNavigate()
       username: event.target.username?.value,
       password: event.target.password?.value,
     }
-    let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+    let hasError = false
+
+    let strongPassword = new RegExp('^[a-zA-Z0-9_]{6,}$')
     if(!strongPassword.test(params.password)){
       setInputWrong(true)
     }
 
+    if (hasError){
+      return
+    }
+
 
     userService.logIn(params).then((response) => {
-      console.log(response);
-      console.log(response.data);
-      console.log(response.data.access_token);
+    
       sessionStorage.setItem('token',response.data.access_token)
       sessionStorage.setItem('userId', response.data.user.id)
       if (response.data.access_token) {

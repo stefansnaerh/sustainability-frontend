@@ -29,7 +29,7 @@ const signUp = (data) => {
 
   var config = {
     method: 'post',
-    url: 'http://' + window.location.hostname + ':8080/users',
+    url: 'https://sustainability-backend2.onrender.com/users',
     headers: {
       'Content-Type': 'multipart/form-data'
     },
@@ -58,7 +58,7 @@ const update = (id, data) => {
 
   var config = {
     method: 'put',
-    url: `http://` + window.location.hostname + `:8080/users/${id}`,
+    url: `https://sustainability-backend2.onrender.com/users/${id}`,
     headers: {
       'Authorization': sessionStorage.getItem("token"),
       'Content-Type': 'multipart/form-data'

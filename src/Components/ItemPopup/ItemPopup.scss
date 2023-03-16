@@ -35,11 +35,12 @@
     }
     .item-photo {
         width: 100%;
+        max-height: 190px;
     }
     .task-tree {
         position: absolute;
         right: -29px;
-        top: 260px;
+        top: 190px;
     }
     .points-leaf-container {
        width: 6rem;
