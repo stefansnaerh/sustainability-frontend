@@ -52,7 +52,7 @@ function PostPopup({setShowPostPopup}) {
       userId: sessionStorage.getItem('userId'),
       
     }
-    window.location.reload()
+    
     // let hasError = false
     // let strongPassword = new RegExp('^[a-zA-Z0-9_]{6,}$')
     // console.log(strongPassword)
@@ -89,10 +89,13 @@ function PostPopup({setShowPostPopup}) {
       console.log(response);
       console.log(response.data);
       console.log(response.data.access_token);
+      window.location.reload()
+      
     }).catch(e => {
       console.log(e);
     });
     setShowPostPopup(false)
+    
   }
 
   const getCategories = () => {
