@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import CategoryItemsService from '../../Services/categoryitems.service'
 
 const ItemPage = ({ isHamburgerOpen }) => {
-    const urlImage = 'http://localhost:8080/public/images/'
+    const urlImage = 'https://sustainability-backend2.onrender.com/public/images/'
     let { id } = useParams();
     let { name } = useParams();
     const [items, setItems] = useState([]);

@@ -14,7 +14,7 @@ const ItemPopup = (props) => {
   const [categoryItem, setCategoryItem] = useState([]);
   const [showPostPopup, setShowPostPopup] = useState(false)
   let { id } = props;
-  const urlImage = 'http://localhost:8080/public/images/'
+  const urlImage = 'https://sustainability-backend2.onrender.com/public/images/'
 
   const getCatItem = () => {
     CategoryItemsService.get(id).then((response) => {
