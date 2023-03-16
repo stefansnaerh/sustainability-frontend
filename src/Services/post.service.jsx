@@ -18,10 +18,7 @@ const create = (data) => {
   form.append('location', (data.location));
   form.append('userId', data.userId);
   form.append('categoryId', data.categoryId);
-  form.append('username', (data.username));
-  form.append('password', (data.password));
-  form.append('email', data.email);
-  form.append('birthdate', data.birthdate);
+  form.append('categoryitemId', (data.categoryitemId));
   form.append('image', data.image);
 
 

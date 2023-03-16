@@ -21,17 +21,21 @@ const ItemPage = ({ isHamburgerOpen }) => {
         });
     }
 
+    
+
     const setStates = (pop) =>{
         setShowItemPopup(pop)
         setBlackOut(pop)
     }
 
     const [showItemPopup, setShowItemPopup] = useState(false)
+    const [indexSelected, setIndexSelected] = useState(null)
     const [blackOut,setBlackOut] = useState(false);
 
     useEffect(() => {
         getCategoryItems();
     }, []);
+
     console.log(document.getElementsByClassName('popup-container')[0]);
     return (
         < >
@@ -41,7 +45,9 @@ const ItemPage = ({ isHamburgerOpen }) => {
                     {items.map((categoryItem, index) =>
 
                         <div className='text-image-container' onClick={() => setStates(true)}>
-                            <img src={urlImage + categoryItem.image} onClick={() => setShowItemPopup(true)} />
+                            <img src={urlImage + categoryItem.image} onClick={() => {
+                                setShowItemPopup(true);
+                                setIndexSelected(index)}} />
                             <div>
                                 <span className='item-name-container'>
                                     <h2>{categoryItem.name}</h2>
@@ -54,9 +60,9 @@ const ItemPage = ({ isHamburgerOpen }) => {
             </section>
             {showItemPopup ? (
                     <>
-                        {items.map((categoryItem, index) =>
-                            <ItemPopup id={categoryItem.id} />
-                        )}
+                        
+                            <ItemPopup id={items[indexSelected].id} />
+                        
                     </>
                 ) : null}
         </>
