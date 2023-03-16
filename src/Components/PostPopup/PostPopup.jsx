@@ -50,7 +50,9 @@ function PostPopup({setShowPostPopup}) {
       categoryId: event.target.categoryId?.value,
       categoryitemId: event.target.categoryitemId?.value,
       userId: sessionStorage.getItem('userId'),
+      
     }
+    window.location.reload()
     // let hasError = false
     // let strongPassword = new RegExp('^[a-zA-Z0-9_]{6,}$')
     // console.log(strongPassword)
