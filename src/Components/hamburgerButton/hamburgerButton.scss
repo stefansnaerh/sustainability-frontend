@@ -1,0 +1,13 @@
+
+
+.hamburger {
+   align-self: center;
+   margin-right: 10px;
+}
+
+@media (min-width: 799px) {
+   .hamburger {
+      display: none;
+   }
+}
+

@@ -1,0 +1,181 @@
+
+@import '../../Fonts/_Fonts.scss';
+@import '../../Colors/_Colors.scss';
+
+
+.leaderboard-container-error{
+    background-color: $brown;
+    font-family: $primary;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-family: $lilita;
+        font-size: 2.4rem;
+        color: $white;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        margin-bottom: 5em ;
+
+    }
+    h2 {
+        font-family: $lilita;
+        font-size: 3rem;
+        color: $white;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+}
+
+.sign-out-btn {
+    background-color: $green;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    color: $white;
+    border: none;
+    font-family: $primary;
+    font-size: 2rem;
+    height: 40px;
+    width: 180px;
+}
+
+
+.leaderboard-container {
+    background-color: $brown;
+    font-family: $primary;
+    height: 100vh;
+    h1 {
+        font-family: $lilita;
+        font-size: 2.4rem;
+        color: $white;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+    h2 {
+        font-family: $lilita;
+        font-size: 1.75rem;
+        color: $white;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+    .first-place-container {
+        position: relative;
+        width: 20rem;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        display: flex; 
+        height: 190px;
+        flex-direction: column;
+        align-items: center;
+        .first-place-medal {
+            position: absolute;
+            z-index: 82;
+        }
+        .first-place-image {
+            position: absolute;
+            z-index: 81;
+            height: 105px;
+            width: 100px;
+            border-radius: 50%;
+            left: 50px;
+            top: 10px;
+            object-fit: cover;
+        }
+        .points-container {
+           position: absolute;
+           bottom: 0;
+           p {
+            color: $white;
+            font-family: $primary;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            margin-top: 0;
+            text-align: center;
+           }
+        }
+    }
+    .second-third-place-container {
+        position: relative;
+        width: 35rem;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        display: flex; 
+        height: 190px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        .second-place-container {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            display: flex;
+            justify-content: center;
+            .second-place-medal {
+                position: absolute;
+                z-index: 82;
+                left: 0; 
+                right: 0; 
+                margin-left: auto; 
+                margin-right: auto;
+            }
+            .second-place-image {
+                border-radius: 50%;
+                height: 82px;
+                width: 82px;
+                position: absolute;
+                z-index: 81;
+                right: 0;
+                top: 2px;
+                left: 0; 
+                right: 0; 
+                margin-left: auto; 
+                margin-right: auto;
+            }
+            .points-container {
+                position: absolute;
+                bottom: 0;
+                p {
+                    color: $white;
+                    font-family: $primary;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    text-align: center;
+                }
+            }   
+        }
+    }
+    .remaining-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color:  rgba(105, 46, 1, 0.78);;
+            height: 60px;
+            border-width: 3px 0px 0px 0px;
+            border-style: solid;
+            border-color: #EEC7AA;
+            img {
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+
+            }
+            p {
+                color: $white;
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,210 @@
+@import '../../Fonts/_Fonts.scss';
+@import '../../Colors/_Colors.scss';
+
+.header-container {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $skyBlue;
+    height: 70px;
+    z-index: 999;
+    header {
+        height: 60px;
+        background-color: $skyBlue;
+        display: flex;
+        justify-content: space-between;
+        font-family: $primary;
+        .logo {
+            margin: 5px;
+            max-width: 11rem;
+           
+        
+        }
+    }  
+    .tree-container {
+        position: absolute;
+        display: flex;
+        width: 17rem;
+        gap: 1.5rem;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 14px;
+        .tree1 {
+         height: 60px;
+         width: 60px;
+        }
+        .tree2 {
+            height: 60px;
+            width: 60px;
+        }
+        .tree3 {
+            height: 60px;
+            width: 60px;
+        }
+    }
+    .dirt {
+      width: 100%;
+      position: absolute;
+      top: 60px;
+    }
+    .dirt-tablet {
+      width: 100%;
+      position: absolute;
+      top: 60px;
+    }
+    .navbar-tablet {
+        display: none;
+    }
+    .navbar-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        position: absolute;
+        margin-top: 70px;
+        margin-left: 800px;
+        height: 100vh;
+        width: 100vw;
+        background-color: $brown;
+        z-index: 10;
+        align-items: center;
+        ul {
+            list-style: none;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 3rem 0 0 0;
+            width: 240px;
+            .icon-text-container {
+                display: flex;
+                flex-direction: row;
+             
+                li {
+                    align-self: center;
+                    margin-left: 30px;
+                }
+                img {
+                    height: 28px;
+                    width: 28px;
+                    align-self: center;
+                    margin-bottom: 3px;
+                    margin-left: 5px;
+                }
+            }
+            a {
+                list-style: none;
+                text-decoration: none;
+                color: $white;
+            
+                .line {
+                    background-color: #E1B083;
+                    height: 3px;
+                    width: 240px;
+                    position: absolute;
+                }
+            }
+        }
+        .sign-out-btn {
+            background: rgba(255, 64, 64, 0.9);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            color: $white;
+            border: none;
+            font-family: $primary;
+            font-size: 2rem;
+            height: 40px;
+            width: 180px;
+        }
+        .sign-in-btn {
+            background: $green;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            color: $white;
+            border: none;
+            font-family: $primary;
+            font-size: 2rem;
+            height: 40px;
+            width: 180px;
+        }
+    }
+   
+    
+}
+
+@media (max-width: 650px) {
+    .header-container {
+            .dirt-tablet {
+                display: none;
+            }
+    }
+}
+
+
+@media (min-width: 500px) {
+    .header-container {
+        header {
+            .tree-container {
+                width: 20rem;
+                gap: 3rem;
+                top: 14px;
+            }
+        }
+    }
+}
+@media (min-width: 650px) {
+    .header-container {
+            .dirt{
+                display: none;
+            }
+            header {
+                .tree-container {
+                    top: 14px;
+                    gap: 4rem;
+                }
+            }
+    }
+}
+@media (min-width: 799px) {
+    .header-container { 
+            header {
+                .tree-container {
+                    position: absolute;
+                    display: flex;
+                    width: 17rem;
+                    gap: 1.5rem;
+                    left: 12rem;
+                    right: auto;
+                    top: 14px;  
+                }
+                .navbar-mobile {
+                    display: none;
+                }
+                .navbar-tablet {
+                    display: initial;
+                    display: flex;
+                    align-items: center;
+                    padding-right: 2rem;
+                    ul {
+                        display: flex;
+                        gap: 2rem;
+                        .cloud {
+                            background-color: $white;
+                            padding: 4px 12px 4px 12px;
+                            border-radius: 25px;
+                        }
+                        li {
+                            font-family: $lilita;
+                            font-size: 2rem;
+                            color: #6B6B6B;
+                        }
+                    }
+                    a {
+                        list-style: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+    }
+}
