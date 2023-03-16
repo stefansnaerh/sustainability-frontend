@@ -32,9 +32,15 @@ let navigate = useNavigate()
       username: event.target.username?.value,
       password: event.target.password?.value,
     }
-    let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+    let hasError = false
+
+    let strongPassword = new RegExp('^[a-zA-Z0-9_]{6,}$')
     if(!strongPassword.test(params.password)){
       setInputWrong(true)
+    }
+
+    if (hasError){
+      return
     }
 
 
