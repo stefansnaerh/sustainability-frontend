@@ -37,11 +37,13 @@ const ItemPopup = (props) => {
           <p className='bee-good'>Be Good at..</p>
           <h1>{categoryItem.name}</h1>
           <img className='item-photo' alt='attraction' src={urlImage + categoryItem.image} />
-          <img
+         <a href="https://www.globalgoals.org/goals/"> 
+         <img
             alt='BY DOING THIS TASK YOU ARE HELPING THE WORLD BY SUPPORTING THESE UN WOLRD GOALS >'
             className='task-tree'
             src={taskTree}
           />
+          </a>
           <div className='points-leaf-container'>
             <p>{categoryItem.points}p</p>
           </div>
