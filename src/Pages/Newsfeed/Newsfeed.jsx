@@ -24,7 +24,7 @@ function Newsfeed() {
     const getEverything = () => {
         PostService.getAll().then((response) => {
             
-          setItems({...items, posts: response.data, userData: 0})
+          setItems({...items, posts: response.data.reverse(), userData: 0})
             console.log(items);
 
         }).catch((e) => {
