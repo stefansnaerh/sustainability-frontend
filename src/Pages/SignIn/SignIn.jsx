@@ -50,7 +50,6 @@ let navigate = useNavigate()
       sessionStorage.setItem('userId', response.data.user.id)
       if (response.data.access_token) {
         navigate("/newsfeed")
-        console.log(sessionStorage.getItem("token"));
        }
        
     }).catch(e => {
@@ -58,7 +57,6 @@ let navigate = useNavigate()
     });
 
   }
-  console.log(inputWrong)
 
   return (
     <section className='sign-in-container'>

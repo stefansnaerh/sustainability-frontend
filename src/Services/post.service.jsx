@@ -11,8 +11,6 @@ const get = (id) => {
 }
 
 const create = (data) => {
-  console.log("todo loco")
-  console.log(data)
 
   let form = new FormData();
   form.append('location', (data.location));

@@ -38,11 +38,8 @@ function SignUp() {
     var url = reader.readAsDataURL(file);
 
     reader.onloadend = function (e) {
-      console.log("holaaaaaaaaaaa", reader.result)
       setImgSrc(reader.result);
     };
-
-    console.log(url) // Would see a path?
 
     setUser({ ...user, image: file });
   };
@@ -60,10 +57,8 @@ function SignUp() {
     }
     let hasError = false
     let strongPassword = new RegExp('^[a-zA-Z0-9_]{6,}$')
-    console.log(strongPassword)
     if(!strongPassword.test(params.password)){
       setWrongPassword(true)
-      console.log("hello world")
       hasError = true
     }
 
@@ -96,7 +91,6 @@ function SignUp() {
       sessionStorage.setItem('userId', response.data.user.id)
       if (response.data.access_token) {
         navigate("/newsfeed")
-        console.log(sessionStorage.getItem("token"));
        }
     }).catch(e => {
       console.log(e);

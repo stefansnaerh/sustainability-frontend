@@ -25,7 +25,6 @@ function Newsfeed() {
         PostService.getAll().then((response) => {
             
           setItems({...items, posts: response.data.reverse(), userData: 0})
-            console.log(items);
 
         }).catch((e) => {
             console.log(e)
@@ -39,7 +38,6 @@ function Newsfeed() {
        
 
     }, []);
-    console.log(items);
   return (
     <section className='newsfeed-container'>
        <h1>Newsfeed</h1>

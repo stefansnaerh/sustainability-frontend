@@ -13,7 +13,6 @@ const ItemPage = ({ isHamburgerOpen }) => {
 
     const getCategoryItems = () => {
         CategoryItemsService.getByCategory(id).then((response) => {
-            console.log(response.data);
             setItems(response.data)
 
         }).catch((e) => {
@@ -36,7 +35,6 @@ const ItemPage = ({ isHamburgerOpen }) => {
         getCategoryItems();
     }, []);
 
-    console.log(document.getElementsByClassName('popup-container')[0]);
     return (
         < >
             <section className={showItemPopup? "for-blackout item-page-container": "item-page-container"} onMouseMoveCapture={() => setStates(false)}>

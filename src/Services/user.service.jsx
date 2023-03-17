@@ -10,15 +10,10 @@ const get = (id) => {
 }
 
 const getTopTen = () => {
-  console.log("test")
   return http.get(`/users/topten`);
 }
 
 const signUp = (data) => {
-
-  console.log("todo loco")
-  console.log(data)
-
   let form = new FormData();
   form.append('username', (data.username));
   form.append('password', (data.password));
@@ -45,8 +40,6 @@ const logIn = (data) => {
 }
 
 const update = (id, data) => {
-  console.log("todo loco")
-  console.log(data)
 
   let form = new FormData();
   form.append('username', (data.username));
