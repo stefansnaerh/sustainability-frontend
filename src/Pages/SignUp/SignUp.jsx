@@ -93,6 +93,7 @@ function SignUp() {
         navigate("/newsfeed")
        }
     }).catch(e => {
+      alert("Some info you typed in doesn't follow our standards, try again")
       console.log(e);
     });
   

@@ -40,6 +40,7 @@ let navigate = useNavigate()
     }
 
     if (hasError){
+      
       return
     }
 
@@ -53,6 +54,7 @@ let navigate = useNavigate()
        }
        
     }).catch(e => {
+      alert("Your info wasn't right, try again")
       console.log(e);
     });
 
