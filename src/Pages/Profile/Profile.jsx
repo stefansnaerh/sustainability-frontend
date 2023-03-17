@@ -18,7 +18,6 @@ const Profile = () => {
     const getProfile = () => {
         UserService.get(userId).then((response) => {
             setUser(response.data);
-            console.log(response.data);
         }).catch((e) => {
             console.log(e)
         });
@@ -28,7 +27,6 @@ const Profile = () => {
     const getPostsByUser = () => {
         PostService.getByUser(userId).then((response) => {
             setPosts(response.data);
-            console.log(response.data);
         }).catch((e) => {
             console.log(e)
         });

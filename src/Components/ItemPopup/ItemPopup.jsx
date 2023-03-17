@@ -19,7 +19,7 @@ const ItemPopup = (props) => {
   const getCatItem = () => {
     CategoryItemsService.get(id).then((response) => {
       setCategoryItem(response.data);
-      console.log(response.data)
+      
     }).catch((e) => {
       console.log(e);
     })
@@ -33,7 +33,6 @@ const ItemPopup = (props) => {
     <>
       {!!categoryItem ?
         <section className='popup-container'>
-          {console.log(categoryItem)}
           <p className='bee-good'>Be Good at..</p>
           <h1>{categoryItem.name}</h1>
           <img className='item-photo' alt='attraction' src={urlImage + categoryItem.image} />

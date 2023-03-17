@@ -21,7 +21,6 @@ function Leaderboard() {
   const getTop = () => {
     UserService.getTopTen().then((response) => {
       setTopTen(response.data);
-      console.log(response.data)
     }).catch((e) => {
       console.log(e);
     })
@@ -34,7 +33,6 @@ function Leaderboard() {
     <>
       {topTen.length >= 3 ?
         <section className='leaderboard-container'>
-          {console.log(topTen)}
           <h1>Leaderboard</h1>
           <div className='first-place-container'>
             <img className='first-place-medal' src={firstPlace} />
